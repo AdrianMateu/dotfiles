@@ -1,0 +1,54 @@
+{
+    // "explorer.confirmDelete": false,
+    // "explorer.confirmDragAndDrop": false,
+    // "search.useGlobalIgnoreFiles": true,
+    "files.autoSave": "onFocusChange",
+    "files.associations": {
+        "Dockerfile-*": "dockerfile"
+    },
+    "files.trimFinalNewlines": true,
+    "files.exclude": {
+        "**/.idea": true
+    },
+    "editor.minimap.enabled": false,
+    "editor.formatOnSave": true,
+    "editor.fontFamily": "Dank Mono, Hack, Menlo, Monaco, monospace",
+    "editor.fontSize": 13,
+    "editor.letterSpacing": 0.2,
+    "editor.lineHeight": 22,
+    "editor.rulers": [
+        120
+    ],
+    "editor.suggestSelection": "first",
+    "editor.renderWhitespace": "all",
+    "editor.wordWrap": "on",
+    "editor.wrappingIndent": "indent",
+    // "terminal.integrated.fontFamily": "Dank Mono, Hack, Menlo, Monaco, monospace",
+    // "terminal.integrated.fontSize": 16,
+    // "terminal.integrated.lineHeight": 1.4,
+    "terminal.external.osxExec": "iTerm.app",
+    "terminal.integrated.fontFamily": "Source Code Pro for Powerline",
+    "terminal.integrated.shell.osx": "/bin/zsh",
+    "workbench.editor.highlightModifiedTabs": true,
+    "workbench.list.horizontalScrolling": true,
+    "workbench.sideBar.location": "left",
+    "workbench.colorTheme": "Gruvbox Dark Medium",
+    "workbench.iconTheme": "vscode-icons",
+    "workbench.fontAliasing": "auto",
+    "workbench.activityBar.visible": true,
+    "workbench.startupEditor": "newUntitledFile",
+    "auto-close-tag.SublimeText3Mode": true,
+    "prettier.useTabs": true,
+    "prettier.tabWidth": 4,
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "gitlens.views.repositories.files.layout": "list",
+    "diffEditor.ignoreTrimWhitespace": false,
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    }
+}

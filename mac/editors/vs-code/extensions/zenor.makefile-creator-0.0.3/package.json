@@ -1,0 +1,89 @@
+{
+	"name": "makefile-creator",
+	"displayName": "Makefile Creator",
+	"description": "Create Makefile.",
+	"publisher": "zenor",
+	"version": "0.0.3",
+	"icon": "res/gnu.png",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/zenor27/makefile-creator.git"
+	},
+	"engines": {
+		"vscode": "^1.30.0"
+	},
+	"categories": [
+		"Programming Languages"
+	],
+	"activationEvents": [
+		"onCommand:extension.makefile-creator"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "extension.makefile-creator",
+				"title": "Create Makefile"
+			}
+		],
+		"menus": {
+			"explorer/context": [
+				{
+					"command": "extension.makefile-creator",
+					"when": "explorerResourceIsFolder",
+					"title": "Create Makefile"
+				}
+			]
+		},
+		"configuration": {
+			"type": "object",
+			"title": "Makefile-Creator",
+			"properties": {
+				"makefile-creator.makefile_cxx": {
+					"type": "string",
+					"default": "g++",
+					"description": "Set the CXX"
+				},
+				"makefile-creator.makefile_cxxflags": {
+					"type": "string",
+					"default": "-Wall -Werror -Wextra -pedantic -std=c++17 -g",
+					"description": "Set the CXXFLAGS"
+				},
+				"makefile-creator.makefile_ldflags": {
+					"type": "string",
+					"default": "",
+					"description": "Set the LDFLAGS"
+				},
+				"makefile-creator.makefile_ldlibs": {
+					"type": "string",
+					"default": "",
+					"description": "Set the LDLIBS"
+				},
+				"makefile-creator.makefile_use_asan": {
+					"type": "boolean",
+					"default": true,
+					"description": "Use libasan (if available)"
+				}
+			}
+		}
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"postinstall": "node ./node_modules/vscode/bin/install",
+		"test": "npm run compile && node ./node_modules/vscode/bin/test"
+	},
+	"devDependencies": {
+		"typescript": "^3.1.4",
+		"vscode": "^1.1.25",
+		"tslint": "^5.8.0",
+		"@types/node": "^8.10.25",
+		"@types/mocha": "^2.2.42"
+	},
+	"__metadata": {
+		"id": "128ef024-4d99-43d6-9b09-488f8d186cbd",
+		"publisherId": "5758170b-a78b-4d6d-80f1-ceb18297a389",
+		"publisherDisplayName": "Antoine aka. Zenor"
+	}
+}
